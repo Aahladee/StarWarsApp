@@ -29,6 +29,7 @@ const LoginScreen = ({ navigation }: Props) => {
       <TextInput
         style={styles.input}
         placeholder="Username (Star Wars Character)"
+        placeholderTextColor="#808080"
         value={username}
         onChangeText={setUsername}
       />
