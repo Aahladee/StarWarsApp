@@ -23,6 +23,9 @@ const LoginScreen = ({ navigation }: Props) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Login</Text>
+      <View 
+      style={styles.inputContainer}
+      >
       <TextInput
         style={styles.input}
         placeholder="Username (Star Wars Character)"
@@ -37,6 +40,7 @@ const LoginScreen = ({ navigation }: Props) => {
         onChangeText={setPassword}
       />
       <Button title="Login" onPress={handleLogin} />
+      </View>
     </View>
   );
 };
@@ -45,6 +49,19 @@ const styles = StyleSheet.create({
   container: { flex: 1, justifyContent: "center", padding: 20, backgroundColor:"#ffffff" },
   title: { fontSize: 24, fontWeight: "bold", textAlign: "center", marginBottom: 20 },
   input: { borderWidth: 1, padding: 10, marginBottom: 10, borderRadius: 5 },
+  inputContainer:{
+    backgroundColor: "#ffffff",
+    padding: 20,
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5 // For Android shadow
+  }
 });
 
 export default LoginScreen;
