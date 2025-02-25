@@ -7,12 +7,13 @@ type PlanetProps = {
     population: string;
     climate: string;
   };
+  fontSize: number;
 };
 
-const PlanetItem: React.FC<PlanetProps> = ({ planet }) => {
+const PlanetItem: React.FC<PlanetProps> = ({ planet , fontSize}) => {
   return (
     <View style={styles.item}>
-      <Text style={styles.name}>{planet.name}</Text>
+      <Text style={[styles.name, { fontSize }]}>{planet.name}</Text>
       <Text>Population: {planet.population}</Text>
       <Text>Climate: {planet.climate}</Text>
     </View>
